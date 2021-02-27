@@ -1,0 +1,475 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 85px;
+    background-color:#DEB887!important;
+}
+.p-container {
+    width: 100%;
+    min-height: 100vh;
+}
+/*------------------------------------------------------------------------------*/
+/*トップページ*/
+/*------------------------------------------------------------------------------*/
+.p-top {
+  background-image: url(/img/toppage3.jpg) !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.p-top__container {
+    color: white;
+    padding-top: 5vh;
+         text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+                     -1px 1px 0 #000, 1px -1px 0 #000,
+                     0px 1px 0 #000,  0-1px 0 #000,
+                     -1px 0 0 #000, 1px 0 0 #000;
+}
+
+.p-top__title > h1 {
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 5vw;
+}
+.p-top__title > h2 {
+    font-size: 2.6vw;
+}
+.p-top__contents > h3 {
+    font-size: 1.8vw;
+    margin-bottom: 30px;
+}
+.p-top__example  {
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .p-top__title > h1 {
+        font-size: 7vw;
+    }
+    .p-top__title > h2 {
+        font-size: 3.5vw;
+    }
+    .p-top__contents > h3 {
+        font-size: 3vw;
+        margin-bottom: 30px;
+    }
+    .p-top__example  {
+        font-size: 2.3vw;
+    }
+}
+ 
+@media screen and (max-width: 576px) {
+    .p-top__title > h1 {
+        font-size: 9vw;
+    }
+    .p-top__title > h2 {
+        font-size: 5vw;
+    }
+    .p-top__contents > h3 {
+        font-size: 4.5vw;
+        margin-bottom: 30px;
+    }
+    .p-top__example  {
+        font-size: 3vw;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+/*ナビゲーション*/
+/*------------------------------------------------------------------------------*/
+nav {
+    background-color: #3E312B !important;
+}
+
+.dropdown-menu {
+    background-color: #3E312B !important;
+}
+
+
+.nav-dropdown {
+    color:#FFF !important;
+    font-weight: 600 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #3E312B !important;
+}
+
+.navbar-toggler {
+    padding-right: 2%;
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0 0 !important; 
+    }
+
+    .navbar-collapse {
+        background-color: #3E312B !important;
+}
+    .nav-item > .btn {
+    background-color: #3E312B !important;
+    color:#FFF;
+    font-weight: 600;
+    }
+    .nav-item > .btn:hover {
+    background-color: #3E312B !important;
+    color:#FFF!important;
+    }
+}
+
+.p-header {
+    height: 85px;
+}
+
+.p-header__link-top {
+    color:#FFF !important;
+    font-family: 'Elsie Swash Caps', cursive;
+    font-size: 40px !important;
+    text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+                     -1px 1px 0 #000, 1px -1px 0 #000,
+                     0px 1px 0 #000,  0-1px 0 #000,
+                     -1px 0 0 #000, 1px 0 0 #000
+}
+
+@media screen and (max-width: 1000px) {
+ .p-header__link-top {
+    font-size: 25px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p-header__link-top {
+    font-size: 20px !important;
+    }
+}
+
+
+.navbar-toggler {
+    border:solid 3px !important;
+}
+
+.nav-link {
+    color:#FFF !important;
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+                         -1px 1px 0 #000, 1px -1px 0 #000,
+                         0px 1px 0 #000,  0-1px 0 #000,
+                         -1px 0 0 #000, 1px 0 0 #000
+}
+
+.nav-dropdown {
+    color:#000;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.nav-item > .btn {
+    background-color: #996633;
+    color:#FFF;
+    font-weight: 600;
+}
+.nav-item > .btn:hover {
+    background-color: #FFF;
+    color:#996633;
+    font-weight: 600;
+}
+/*------------------------------------------------------------------------------*/
+/*新規登録*/
+/*------------------------------------------------------------------------------*/
+.p-register__title {
+    padding-top: 30px;
+}
+
+.p-register__title > h1 {
+     font-family: 'Elsie Swash Caps', cursive;
+}
+.p-register__title > h2 {
+     font-weight: 600;
+}
+
+.p-register__button > .btn {
+    margin-top: 40px;
+    background-color: #996633;
+    color:#FFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.p-register__link-login {
+    color:#3E312B;
+    font-size: 20px; 
+}
+
+ 
+@media screen and (max-width: 576px) {
+
+    .p-register__form {
+        width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/*------------------------------------------------------------------------------*/
+/*ログイン*/
+/*------------------------------------------------------------------------------*/
+.p-login__title > h1{
+    padding-top: 30px;
+    font-family: 'Elsie Swash Caps', cursive; 
+}
+
+.p-login__title > h2{
+    font-weight: 600;
+}
+
+.p-login__form .btn {
+    margin-top: 40px;
+    background-color: #996633;
+    color:#FFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+.p-login__link-register {
+    color:#3E312B;
+    font-size: 20px;
+}
+
+ 
+@media screen and (max-width: 576px) {
+
+    .p-login__form {
+        width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+/*投稿内容*/
+/*------------------------------------------------------------------------------*/
+.p-top__board {
+    background-color:#DEB887;
+}
+
+.introduction__wrapper {
+    padding-top: 30px;
+}
+
+.media-body {
+    border-radius: 4%;
+    background:#FAF0E6;
+    padding:20px 20px 5px;
+}
+
+.media-body__information > .user__link {
+    color:#6A3A14;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.media-body__contents {
+    padding-bottom: 5px;
+    min-height: 25vh;
+}
+
+/*------------------------------------------------------------------------------*/
+/*投稿画面*/
+/*------------------------------------------------------------------------------*/
+
+.p-makeIntroduction__form {
+    padding-top: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.p-makeIntroduction__button {
+    margin-top: 40px;
+    background-color: #996633 !important;
+    color:#FFF !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.content {
+    font-size:24px;
+    letter-spacing: 0.1em;
+}
+
+/*------------------------------------------------------------------------------*/
+/*ユーザー詳細画面*/
+/*------------------------------------------------------------------------------*/
+
+.card {
+    background:#FAF0E6!important;
+    border-radius: 20%!important;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.card-body {
+    min-height: 45vh;
+}
+
+.card-title {
+    color:#6A3A14;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.edit__button {
+    width: 80% !important;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    background-color: #996633 !important;
+    color:#FFF !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;  
+}
+
+.follow__button {
+    width: 80% !important;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    font-size: 20px !important;
+    font-weight: 600 !important;    
+}
+
+.unfollow__button {
+    width: 80% !important;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    font-size: 20px !important;
+    font-weight: 600 !important;    
+}
+
+/*------------------------------------------------------------------------------*/
+/*ユーザー詳細情報編集画面*/
+/*------------------------------------------------------------------------------*/
+.edit__form {
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.edit__form > h1 {
+    font-weight: 600;
+    font-size: 26px;
+}
+/*------------------------------------------------------------------------------*/
+/*ユーザー一覧*/
+/*------------------------------------------------------------------------------*/
+.user__icons {
+    padding-top:30px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap:wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+.user__icon {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width:23%;
+    min-height:40vh;
+    border-radius: 10%;
+}
+
+@media screen and (max-width: 1000px) {
+    .user__icon {
+    width:30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+     .user__icon {
+    width:45%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .user__icon {
+    width:80%;
+    margin:0 auto 3%;
+    }
+}
+
+
+.user__icon > .user__icon__name {
+    color:#6A3A14;
+    font-size: 30px;
+    font-weight: 600; 
+}
+
+/*------------------------------------------------------------------------------*/
+/*コメント投稿画面*/
+/*------------------------------------------------------------------------------*/
+.comment__form {
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.comment__label {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.comment__button {
+    margin-top: 40px;
+    background-color: #996633 !important;
+    color:#FFF !important;
+    font-size: 20px !important;
+    font-weight: 600 !important; 
+}
+
+/*------------------------------------------------------------------------------*/
+/*コメント表示画面*/
+/*------------------------------------------------------------------------------*/
+.media-body__comments {
+    background:#FFFFEE; 
+    margin-bottom:20px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.media-body__comments__contents {
+    padding:0 5px 5px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.media-body__comments__contents > p {
+    min-height: 10vh;
+    font-size:24px;
+    letter-spacing: 0.1em;
+}
+
+.comment__handle__button {
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.coomment__link {
+    color:#6A3A14;
+    font-size: 30px;
+    font-weight: 600;  
+}
