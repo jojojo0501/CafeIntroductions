@@ -2,7 +2,7 @@
     @if (Auth::user()->is_favorite($introduction->id))
         {{-- unfavoriteのフォーム --}}
         {!! Form::open(['route' => ['favorites.unfavorite', $introduction->id], 'method' => 'delete']) !!}
-            {!! Form::submit('いいね削除', ['class' => "btn btn-outline-danger btn-block"]) !!}
+            {!! Form::submit('いいね解除', ['class' => "btn btn-outline-danger btn-block"]) !!}
         {!! Form::close() !!}
     @else
         {{-- favoriteのフォーム --}}

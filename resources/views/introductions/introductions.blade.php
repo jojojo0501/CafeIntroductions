@@ -31,7 +31,7 @@
                             @if (Auth::id() == $introduction->user_id)
                                 {{-- 投稿削除ボタンのフォーム --}}
                                 {!! Form::open(["route" => ["introductions.destroy",$introduction->id],"method" => "delete"]) !!}
-                                    {!! Form::submit('投稿削除', ['class' => 'btn btn-outline-danger btn-block']) !!}
+                                    {!! Form::submit('削除', ['class' => 'btn btn-outline-danger btn-block']) !!}
                                 {!! Form::close() !!}
                             @endif
                         </div>
