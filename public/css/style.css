@@ -272,15 +272,106 @@ nav {
     padding:20px 20px 5px;
 }
 
-.media-body__information > .user__link {
+.profile_img {
+    border-radius: 50%;
+    object-fit: cover;
+    width:70px;
+    height: 70px;
+    
+}
+.media-body__information {
+    display: flex;
+    position: relative;
+}
+
+.media-body__information .user__link {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
     color:#6A3A14;
     font-size: 30px;
     font-weight: 600;
+    display: inline-block;
 }
 
 .media-body__contents {
+    margin-top: 10px;
     padding-bottom: 5px;
-    min-height: 25vh;
+    /*min-height: 25vh;*/
+}
+
+.favorite__button {
+    border:none;
+    background-color: #FAF0E6;
+    outline:0;
+}
+
+.favorite__button:focus {
+    outline:0; 
+}
+
+.unfavorite__button {
+    border:none;
+    background-color: #FAF0E6;
+}
+
+.unfavorite__button:focus {
+    outline:0; 
+}
+
+.my-gray {
+     width: 25px;
+     height: 30px;
+     font-size: 25px;
+     color: #e54747; 
+}
+
+.my-pink {
+     width: 25px;
+     height: 30px;
+     font-size: 25px;
+     color: #e54747;
+}
+
+.fa-comment-dots {
+    color:green;
+}
+
+.delete__button {
+    border:none;
+    background-color: #FAF0E6;
+
+}
+
+.delete__button:focus {
+    outline:0; 
+}
+
+
+.handle__button__wrapper {
+    padding-right: 3vw;
+    float:right;
+    display: flex;
+}
+
+.handle__button__item {
+    margin-left: 60px;
+}
+
+.fa-trash-alt {
+    color:blue;
+        float: right;
+}
+
+.comment__delete__button {
+    padding-right: 3vw;
+
+    background:#FFFFEE; 
+    border:none;
+}
+
+.comment__delete__button:focus {
+    outline:0; 
 }
 
 /*------------------------------------------------------------------------------*/
@@ -350,8 +441,6 @@ nav {
     width: 90%;
     }
 }
-
-
 
 .edit__button {
     width: 80% !important;
@@ -483,19 +572,31 @@ nav {
 }
 
 .media-body__comments__contents > p {
-    min-height: 10vh;
+    /*min-height: 10vh;*/
     font-size:24px;
     letter-spacing: 0.1em;
+}
+
+.media-body__comments_information {
+    display: flex;
+    position: relative;
 }
 
 .comment__handle__button {
     padding-left: 5px;
     padding-right: 20px;
-    padding-bottom: 5px;
+    float: right;
 }
 
 .coomment__link {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
     color:#6A3A14;
     font-size: 30px;
-    font-weight: 600;  
+    font-weight: 600;
 }
+.coomment__link:hover {
+    color:#6A3A14;
+}
+
