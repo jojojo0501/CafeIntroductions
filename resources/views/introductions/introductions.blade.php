@@ -5,7 +5,7 @@
                 <div class="media-body">
                     <div class='media-body__information'>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
-                            @if($user->profile_photo_path == null)
+                            @if($introduction->user->profile_photo_path == null)
                                 <div><a href="{{route('users.show',$introduction->user->id)}}"><img src="/img/profile_default.png" class="profile_img"></a></div>
                             @else
                                 <div><a href="{{route('users.show',$introduction->user->id)}}"><img src={{$introduction->user->profile_photo_path}} class="profile_img"></a></div>
@@ -50,7 +50,7 @@
             <li class='media container'>
                 <div class='media-body media-body__comments'>
                     <div class='media-body__comments_information'>
-                            @if($user->profile_photo_path == null)
+                            @if($comment->user->profile_photo_path == null)
                                 <div><a href="{{route('users.show',$comment->user->id)}}"><img src="/img/profile_default.png" class="profile_img"></a></div>
                             @else
                                 <div><a href="{{route('users.show',$introduction->user->id)}}"><img src={{$comment->user->profile_photo_path}} class="profile_img"></a></div>
