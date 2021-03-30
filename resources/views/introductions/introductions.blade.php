@@ -3,6 +3,8 @@
         @foreach ($introductions as $introduction)
             <li class="media mb-3 container">
                 <div class="media-body">
+                    <div class="row"> 
+                    <div class="col-md-6">
                     <div class='media-body__information'>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
                             @if($introduction->user->profile_photo_path == null)
@@ -13,15 +15,17 @@
                         <h3>{!! link_to_route('users.show', $introduction->user->name, ['user' => $introduction->user->id],['class'=>'user__link']) !!}</h3>
                          <div><span class="text-muted">投稿日時 {{ $introduction->created_at }}</span></div>
                     </div>
-                    <div class='row media-body__contents'>
-                        <div class='col-md-6'>
+                        <div class='row media-body__contents'>
                             {{-- 投稿内容 --}}
                             <p class="content">{!! nl2br(e($introduction->content)) !!}</p>
                         </div>
-                        <div class='offset-md-1 col-md-5'>
-                            {{-- 投稿写真 --}}
-                            <img src="{{$introduction->introduction_photo_path}}" width="100%" height="auto">
                         </div>
+                     @if ($introduction->introduction_photo_path !== null)
+                        <div class='introduction__img__wrapper col-md-6'>
+                            {{-- 投稿写真 --}}
+                            <img src="{{$introduction->introduction_photo_path}}" class="introduction__img">
+                        </div>
+                    @endif
                     </div>
                     <div class='handle__button'>
                         <div class="handle__button__wrapper">
