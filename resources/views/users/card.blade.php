@@ -1,7 +1,11 @@
 <div class="card">
     <div class="card-body">
         <h3 class="card-title text-center">{{ $user->name }}</h3>
-         <img src="{{$user->profile_photo_path}}" width="100%" height="auto">
+           @if($user->profile_photo_path == null)
+                <img src="/img/profile_default.png" class="card_img">
+            @else
+                <img src="{{$user->profile_photo_path}}" class="card_img">
+            @endif
     </div>
     <div class="card-button">
         @if (Auth::id() === $user->id)

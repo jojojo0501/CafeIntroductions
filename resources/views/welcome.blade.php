@@ -25,6 +25,9 @@
             </div>
             {{-- ログインページへのリンク --}}
             <div class="p-top__button text-center">
+                {{-- ゲストログインへのリンク --}}
+                <!--<button class="btn btn-success"><a href="{{ route('login.guest') }}" class="">ゲストログイン</a></button>-->
+                 <p class="p-top__link-guestLogin">{!! link_to_route('login.guest', 'ゲストログイン', [], ['class' => 'btn btn-lg btn-light' ,'style' => 'opacity: 0.8;','background-color:#EEEEEE;']) !!}</p>
                  {{-- ログインページへのリンク --}}
                 <p class="p-top__link-login">{!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-lg btn-light' ,'style' => 'opacity: 0.8;','background-color:#EEEEEE;']) !!}</p>
                 {{-- ユーザ登録ページへのリンク --}}

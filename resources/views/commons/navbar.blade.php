@@ -23,6 +23,8 @@
                     </li>
                     <li class="nav-item">{!! link_to_route('introductions.create','カフェを紹介する',[],['class'=>'btn btn-lg'])!!}</li>
                 @else
+                     {{-- ユーザ登録ページへのリンク --}}
+                    <li class="nav-item">{!! link_to_route('login.guest', 'ゲストログイン', [], ['class' => 'nav-link']) !!}</li>
                     {{-- ユーザ登録ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('signup.get', 'ユーザー登録', [], ['class' => 'nav-link']) !!}</li>
                     {{-- ログインページへのリンク --}}

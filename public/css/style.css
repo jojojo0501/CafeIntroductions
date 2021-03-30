@@ -8,6 +8,7 @@ body {
     width: 100%;
     min-height: 100vh;
 }
+
 /*------------------------------------------------------------------------------*/
 /*トップページ*/
 /*------------------------------------------------------------------------------*/
@@ -411,7 +412,18 @@ nav {
 }
 
 .card-body {
-    min-height: 45vh;
+    height: 30vh;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card_img {
+    object-fit: cover;   
+    margin: 0 auto;
+    display: block;
+    height: 60%;
+    width: auto;
 }
 
 .card-title {
@@ -498,11 +510,13 @@ nav {
 }
 
 .user__icon {
+    display: inline-block;
     margin-left: 2%;
     margin-bottom: 2%;
     width:23%;
-    min-height:35vh;
+    height:35vh;
     border-radius: 10%;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {

@@ -5,7 +5,11 @@
                 <div class="media-body">
                     <div class='media-body__information'>
                         {{-- 投稿の所有者のユーザ詳細ページへのリンク --}}
-                        <div><a href="{{route('users.show',$introduction->user->id)}}"><img src={{$introduction->user->profile_photo_path}} class="profile_img"></a></div>
+                            @if($user->profile_photo_path == null)
+                                <div><a href="{{route('users.show',$introduction->user->id)}}"><img src="/img/profile_default.png" class="profile_img"></a></div>
+                            @else
+                                <div><a href="{{route('users.show',$introduction->user->id)}}"><img src={{$introduction->user->profile_photo_path}} class="profile_img"></a></div>
+                            @endif
                         <h3>{!! link_to_route('users.show', $introduction->user->name, ['user' => $introduction->user->id],['class'=>'user__link']) !!}</h3>
                          <div><span class="text-muted">投稿日時 {{ $introduction->created_at }}</span></div>
                     </div>
@@ -46,7 +50,11 @@
             <li class='media container'>
                 <div class='media-body media-body__comments'>
                     <div class='media-body__comments_information'>
-                         <div><a href="{{route('users.show',$comment->user->id)}}"><img src={{$comment->user->profile_photo_path}} class="profile_img"></a></div>
+                            @if($user->profile_photo_path == null)
+                                <div><a href="{{route('users.show',$comment->user->id)}}"><img src="/img/profile_default.png" class="profile_img"></a></div>
+                            @else
+                                <div><a href="{{route('users.show',$introduction->user->id)}}"><img src={{$comment->user->profile_photo_path}} class="profile_img"></a></div>
+                            @endif
                          <h3>{!! link_to_route('users.show', $comment->user->name, ['user' => $comment->user->id],['class'=>'coomment__link user__link']) !!}</h3>
                          <div><span class="text-muted">投稿日時 {{ $comment->created_at }}</span></div>
                     </div>

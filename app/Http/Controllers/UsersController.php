@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 use App\User;
 use Storage;
@@ -13,7 +14,6 @@ class UsersController extends Controller
     {
         // ユーザ一覧をidの降順で取得
         $users = User::orderBy('id', 'desc')->paginate(10);
-
         // ユーザ一覧ビューでそれを表示
         return view('users.index', [
             'users' => $users,
@@ -30,7 +30,6 @@ class UsersController extends Controller
         
         // ユーザの投稿一覧を作成日時の降順で取得
         $introductions = $user->introductions()->orderBy('created_at', 'desc')->paginate(10);
-
 
         // ユーザ詳細ビューでそれを表示
         return view('users.show', [
@@ -49,35 +48,33 @@ class UsersController extends Controller
         ]);
     }
     
+    private const GUEST_USER_ID = 1;
+  
     public function update(Request $request,$id)
     {
-            $request->validate([
-            'file' => 'image|max:3000',
-        ]);
+        $user = User::findOrFail($id); 
+         if($user->id == 1){
+        return redirect('/');
+         }else{
+                $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+                'file' => 'image|max:2048',
+            ]);
+        $user->name =$request->name;
+        $user->email =$request->email;
+         }
         
         if ($request->hasFile('profile_photo_path')){
-            // idの値でユーザを検索して取得
-            $user = User::findOrFail($id);
             //s3アップロード開始
             $profile_photo_path= $request->file('profile_photo_path');
             // バケットの`introudctions`フォルダへアップロード
             $path = Storage::disk('s3')->putFile('introductions', $profile_photo_path, 'public');
-            $user->name =$request->name;
-            $user->email =$request->email;
             $user->profile_photo_path= Storage::disk('s3')->url($path);
-            $user->save();
-            //トップページへリダイレクトさせる
-            return redirect('/');
-        
-        }else{
-            // idの値でユーザを検索して取得
-            $user = User::findOrFail($id); 
-            $user->name =$request->name;
-            $user->email =$request->email;
-            $user->save();
-            //トップページへリダイレクトさせる
-            return redirect('/');
         }
+            $user->save();
+            //トップページへリダイレクトさせる
+            return redirect('/');
         
         
     }
