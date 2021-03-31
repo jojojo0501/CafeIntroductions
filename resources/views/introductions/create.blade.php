@@ -10,7 +10,7 @@
                    </div>
                 <div class="form-group">
                     {!! Form::label('content','内容') !!}
-                    {!! Form::textarea('content', old('content'), ['class' => 'form-control']) !!}
+                    {!! Form::textarea('content', old('content'), ['class' => 'form-control','placeholder'=>'200文字以下で入力してください']) !!}
                 </div>
                     {!! Form::submit('投稿する', ['class' => 'btn btn-block p-makeIntroduction__button']) !!}
             {!! Form::close() !!}

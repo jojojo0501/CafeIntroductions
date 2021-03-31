@@ -18,7 +18,7 @@ class CommentsController extends Controller
     {
         
         $request->validate([
-        'content' => 'required|max:255',
+        'content' => 'required|max:200',
         ]);
        // フォームから送信された値でコメントを作成
         $comment = new Comment;

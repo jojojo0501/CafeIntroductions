@@ -11,7 +11,7 @@
                 {!! Form::open(['route' => 'signup.post']) !!}
                     <div class="form-group">
                         {!! Form::label('name', 'ユーザー名') !!}
-                        {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
+                        {!! Form::text('name', old('name'), ['class' => 'form-control','placeholder' => '8文字以下で入力してください']) !!}
                     </div>
                     <div class="form-group">
                         {!! Form::label('email', 'メールアドレス') !!}
@@ -19,12 +19,12 @@
                     </div>
                     <div class="form-group">
                         {!! Form::label('password', 'パスワード') !!}
-                        {!! Form::password('password', ['class' => 'form-control']) !!}
+                        {!! Form::password('password', ['class' => 'form-control','placeholder'=>'6文字以上で入力してください']) !!}
                     </div>
     
                     <div class="form-group">
                         {!! Form::label('password_confirmation', 'パスワード(確認用)') !!}
-                        {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
+                        {!! Form::password('password_confirmation', ['class' => 'form-control','placeholder'=>'6文字以上で入力してください']) !!}
                     </div>
                     <div class="p-register__button text-center">
                     {!! Form::submit('登録する', ['class' => 'btn btn-block']) !!}

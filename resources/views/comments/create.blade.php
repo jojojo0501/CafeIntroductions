@@ -4,7 +4,7 @@
     {!! Form::open(['route' => ['comments.comment',$introduction->id]]) !!}
         <div class="form-group">
             {!! Form::label('content','コメント',['class'=>'comment__label']) !!}
-            {!! Form::textarea('content',null,['class' => 'form-control']) !!}
+            {!! Form::textarea('content',null,['class' => 'form-control','placeholder'=>'200文字以下で入力してください。']) !!}
         </div>
             {!! Form::submit('投稿する', ['class' => 'btn btn-block comment__button']) !!}
     {!! Form::close() !!}

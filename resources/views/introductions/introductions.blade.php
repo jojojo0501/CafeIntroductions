@@ -15,13 +15,13 @@
                         <h3>{!! link_to_route('users.show', $introduction->user->name, ['user' => $introduction->user->id],['class'=>'user__link']) !!}</h3>
                          <div><span class="text-muted">投稿日時 {{ $introduction->created_at }}</span></div>
                     </div>
-                        <div class='row media-body__contents'>
+                        <div class='media-body__contents'>
                             {{-- 投稿内容 --}}
                             <p class="content">{!! nl2br(e($introduction->content)) !!}</p>
                         </div>
-                        </div>
+                    </div>
                      @if ($introduction->introduction_photo_path !== null)
-                        <div class='introduction__img__wrapper col-md-6'>
+                        <div class='introduction__img__wrapper offset-md-1 col-md-5'>
                             {{-- 投稿写真 --}}
                             <img src="{{$introduction->introduction_photo_path}}" class="introduction__img">
                         </div>

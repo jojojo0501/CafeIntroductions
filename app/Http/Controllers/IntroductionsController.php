@@ -34,7 +34,7 @@ class IntroductionsController extends Controller
     {
         // バリデーション
         $request->validate([
-            'content' => 'required|max:255',
+            'content' => 'required|max:200',
             'file' => 'image|max:3000',
         ]);
     

@@ -269,7 +269,7 @@ nav {
 
 .media-body {
     background:#FAF0E6;
-    padding:20px 20px 5px;
+    padding:20px 30px 5px;
 }
 
 .profile_img {
@@ -282,6 +282,10 @@ nav {
 .media-body__information {
     display: flex;
     position: relative;
+}
+
+.media-body__information h3 {
+    margin-left: 10px
 }
 
 .media-body__information .user__link {
@@ -302,6 +306,7 @@ nav {
   position: relative;
   width: 250px;
   height: 250px;
+  overflow: hidden;
   margin-bottom: 15px;
 }
 
@@ -405,6 +410,8 @@ nav {
 }
 
 .content {
+    
+word-break: break-all;
     font-size:24px;
     letter-spacing: 0.1em;
 }
@@ -605,6 +612,10 @@ nav {
 .media-body__comments_information {
     display: flex;
     position: relative;
+}
+
+.media-body__comments_information h3 {
+    margin-left:10px;
 }
 
 .comment__handle__button {
